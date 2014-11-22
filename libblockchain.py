@@ -4,19 +4,19 @@
 import urllib
 
 def get_balance(address):
-    reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/addressbalance/" + address)
+    reader = urllib.request.urlopen("http://blockchain.info/q/addressbalance/" + address)
     balance = reader.read()
     reader.close()
     return balance
 
 def get_amount_received(address):
-    reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/getreceivedbyaddress/" + address)
+    reader = urllib.request.urlopen("http://blockchain.info/q/getreceivedbyaddress/" + address)
     amnt_received = reader.read()
     reader.close()
     return balance
 
 def get_amount_sent(address):
-    reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/getsentbyaddress/" + address)
+    reader = urllib.request.urlopen("http://blockchain.info/q/getsentbyaddress/" + address)
     amnt_sent = reader.read()
     reader.close()
     return balance
