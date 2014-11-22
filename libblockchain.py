@@ -1,4 +1,4 @@
-'libdogechain - A Dogechain.info"s API wrapper.'
+'libblockchain - A Blockchain.info"s API wrapper.'
 'GNU GPL v3.0 or above - <http://gnu.org/license/gpl.txt>'
 
 import urllib
