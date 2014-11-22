@@ -70,3 +70,51 @@ def get_hashrate():
     output = reader.read()
     reader.close()
     return output
+
+def get_market_cap():
+    'Get the hashrate in gigahashes.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/marketcap")
+    output = reader.read()
+    reader.close()
+    return output
+
+def get_transactions_count_24hr():
+    'Get the hashrate in gigahashes.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/24hrtransactioncount")
+    output = reader.read()
+    reader.close()
+    return output
+
+def get_btc_sent_count_24hr_satoshi():
+    'Get the hashrate in gigahashes.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/24hrbtcsent")
+    output = reader.read()
+    reader.close()
+    return output
+
+def get_unconfirmed_count():
+    'Get the hashrate in gigahashes.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/unconfirmedcount")
+    output = reader.read()
+    reader.close()
+    return output
+
+def generate_key():
+    'Generate a new bitcoin address and a private key. Returns public key and then private key.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/newkey")
+    output = reader.read()
+    reader.close()
+    splitter = output.split(" ")
+    count = 0
+    for string in splitter:
+        count = count + 1
+        if count == 1: return string
+        elif count == 2: return string
+
+def get_unconfirmed_count():
+    'Get the hashrate in gigahashes.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/unconfirmedcount")
+    output = reader.read()
+    reader.close()
+    return output
+
