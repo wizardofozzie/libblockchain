@@ -59,7 +59,14 @@ def get_block_count():
     return output
     
 def get_total_bc():
-    reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/gettotalbc")
+    reader = urllib.request.urlopen("http://blockchain.info/q/totalbc")
+    output = reader.read()
+    reader.close()
+    return output
+
+def get_hashrate():
+    'Get the hashrate in gigahashes.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/hashrate")
     output = reader.read()
     reader.close()
     return output
