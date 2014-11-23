@@ -81,6 +81,10 @@ def get_unconfirmed_count():
     'Get the hashrate in gigahashes.'
     return urllib.request.urlopen("http://blockchain.info/q/unconfirmedcount").read()
 
+def get_tx_rejected_reason(input_hex):
+    'Get the reason why a certain transaction specified by "hex" was rejected.'
+    return urllib.request.urlopen("http://blockchain.info/q/rejected/" + input_hex).read()
+
 def get_version():
     'Get the version of the library.'
     return "1.2.0.0"
