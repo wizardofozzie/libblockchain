@@ -5,6 +5,10 @@
 
 A Blockchain.info's API wrapper
 
+##Usage
+
+_**Coming soon!**_
+
 ##Helpful links
 
 * [BitcoinTalk Release](https://bitcointalk.org/index.php?topic=869171.new#new)
