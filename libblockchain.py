@@ -80,4 +80,4 @@ def get_unconfirmed_count():
 
 def get_version():
     'Get the version of the library.'
-    return "1.0.0.0"
+    return "1.2.0.0"
