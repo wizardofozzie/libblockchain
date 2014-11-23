@@ -12,13 +12,6 @@ def get_amount_received(address):
 def get_amount_sent(address):
     return urllib.request.urlopen("http://blockchain.info/q/getsentbyaddress/" + address).read()
 
-'def check_address(address):'
-    'return urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/checkaddress/" + address)'
-    ''
-    ''
-    'if output == "X5" or output == "SZ" or output == "CK": return False'
-    'else: return True'
-
 def decode_address(address):
     return urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/decode_address/" + address).read()
 
