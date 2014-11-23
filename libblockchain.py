@@ -77,6 +77,13 @@ def get_hashrate():
     output = reader.read()
     reader.close()
     return output
+    
+def get_latest_hash():
+    'Get the hashrate in gigahashes.'
+    reader = urllib.request.urlopen("http://blockchain.info/q/latesthash")
+    output = reader.read()
+    reader.close()
+    return output
 
 def get_market_cap():
     'Get the hashrate in gigahashes.'
