@@ -71,7 +71,7 @@ def get_btc_sent_count_24hr_satoshi():
 
 def get_unconfirmed_count():
     'Get the hashrate in gigahashes.'
-     return urllib.request.urlopen("http://blockchain.info/q/unconfirmedcount").read()
+    return urllib.request.urlopen("http://blockchain.info/q/unconfirmedcount").read()
 
 def generate_key():
     'Generate a new bitcoin address and a private key. Returns public key and then private key.'
