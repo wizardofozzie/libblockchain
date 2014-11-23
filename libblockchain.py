@@ -129,12 +129,7 @@ def generate_key():
     reader = urllib.request.urlopen("http://blockchain.info/q/newkey")
     output = reader.read()
     reader.close()
-    splitter = output.split(" ")
-    count = 0
-    for string in splitter:
-        count = count + 1
-        if count == 1: return string
-        elif count == 2: return string
+    return output
 
 def get_unconfirmed_count():
     'Get the hashrate in gigahashes.'
@@ -143,3 +138,6 @@ def get_unconfirmed_count():
     reader.close()
     return output
 
+def get_version():
+    'Get the version of the library.'
+    return "1.0.0.0"
