@@ -16,7 +16,7 @@ def decode_address(address):
     return urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/decode_address/" + address).read()
 
 def get_address_firstseen(address):
-    return return urllib.request.urlopen("http://blockchain.info/q/addressfirstseen/" + address).read()
+    return urllib.request.urlopen("http://blockchain.info/q/addressfirstseen/" + address).read()
 
 def address_to_hash(address):
     return urllib.request.urlopen("http://blockchain.info/q/addresstohash/" + address).read()
