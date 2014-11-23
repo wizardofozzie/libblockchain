@@ -35,13 +35,13 @@ def decode_address(address):
     return output
     
 def address_to_hash(address):
-    reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/addresstohash/" + address)
+    reader = urllib.request.urlopen("http://blockchain.info/q/addresstohash/" + address)
     output = reader.read()
     reader.close()
     return output
 
 def hash_to_address(address):
-    reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/hashtoaddress/" + address)
+    reader = urllib.request.urlopen("http://blockchain.info/q/hashtoaddress/" + address)
     output = reader.read()
     reader.close()
     return output
