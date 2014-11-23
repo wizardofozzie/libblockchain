@@ -21,8 +21,14 @@ def get_address_firstseen(address):
 def address_to_hash(address):
     return urllib.request.urlopen("http://blockchain.info/q/addresstohash/" + address).read()
 
-def hash_to_address(hash):
-    return urllib.request.urlopen("http://blockchain.info/q/hashtoaddress/" + address).read()
+def hash_to_address(input_hash):
+    return urllib.request.urlopen("http://blockchain.info/q/hashtoaddress/" + input_hash).read()
+
+def convert_pubkey_to_address(public_key):
+    return urllib.request.urlopen("http://blockchain.info/q/addrpubkey/" + public_key).read()
+
+def convert_address_to_publickey(address):
+    return urllib.request.urlopen("http://blockchain.info/q/pubkeyaddr/" + address).read()
 
 def get_difficulty():
     return urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/getdifficulty").read()
