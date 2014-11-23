@@ -21,7 +21,7 @@ def get_address_firstseen(address):
 def address_to_hash(address):
     return urllib.request.urlopen("http://blockchain.info/q/addresstohash/" + address).read()
 
-def hash_to_address(address):
+def hash_to_address(hash):
     return urllib.request.urlopen("http://blockchain.info/q/hashtoaddress/" + address).read()
 
 def get_difficulty():
@@ -50,6 +50,10 @@ def get_latest_hash():
 def get_market_cap():
     'Get the hashrate in gigahashes.'
     return urllib.request.urlopen("http://blockchain.info/q/marketcap").read()
+
+def get_market_24hr_price():
+    'Get the hashrate in gigahashes.'
+    return urllib.request.urlopen("http://blockchain.info/q/24hrprice").read()
 
 def get_transactions_count_24hr():
     'Get the hashrate in gigahashes.'
