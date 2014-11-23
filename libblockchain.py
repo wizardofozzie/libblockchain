@@ -34,6 +34,13 @@ def decode_address(address):
     reader.close()
     return output
     
+
+def get_address_firstseen(address):
+    reader = urllib.request.urlopen("http://blockchain.info/q/addressfirstseen/" + address)
+    output = reader.read()
+    reader.close()
+    return output
+
 def address_to_hash(address):
     reader = urllib.request.urlopen("http://blockchain.info/q/addresstohash/" + address)
     output = reader.read()
