@@ -21,12 +21,12 @@ def get_amount_sent(address):
     reader.close()
     return balance
 
-def check_address(address):
-    reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/checkaddress/" + address)
-    output = reader.read()
-    reader.close()
-    if output == "X5" or output == "SZ" or output == "CK": return False
-    else: return True
+'def check_address(address):'
+    'reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/checkaddress/" + address)'
+    'output = reader.read()'
+    'reader.close()'
+    'if output == "X5" or output == "SZ" or output == "CK": return False'
+    'else: return True'
 
 def decode_address(address):
     reader = urllib.request.urlopen("http://dogechain.info/chain/Dogecoin/q/decode_address/" + address)
@@ -34,7 +34,6 @@ def decode_address(address):
     reader.close()
     return output
     
-
 def get_address_firstseen(address):
     reader = urllib.request.urlopen("http://blockchain.info/q/addressfirstseen/" + address)
     output = reader.read()
@@ -58,7 +57,19 @@ def get_difficulty():
     output = reader.read()
     reader.close()
     return output
+
+def get_eta_nextblock():
+    reader = urllib.request.urlopen("http://blockchain.info/q/eta")
+    output = reader.read()
+    reader.close()
+    return output
     
+def get_avgtx_number():
+    reader = urllib.request.urlopen("http://blockchain.info/q/avgtxnumber")
+    output = reader.read()
+    reader.close()
+    return output
+
 def get_block_count():
     reader = urllib.request.urlopen("http://blockchain.info/q/getblockcount")
     output = reader.read()
